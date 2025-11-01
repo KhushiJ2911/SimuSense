@@ -1,0 +1,11 @@
+# Configuration for the Proportional (P) Controller Node
+
+# --- LINEAR (Distance) CONTROL GAINS ---
+# KP_LINEAR: Proportional gain for the linear velocity (forward/backward)
+KP_LINEAR: 0.005
+MAX_LINEAR_SPEED: 0.5  # Max forward speed limit (m/s)
+
+# --- ANGULAR (Turning) CONTROL GAINS ---
+# KP_ANGULAR: Proportional gain for the angular velocity (turning)
+KP_ANGULAR: 0.003
+MAX_ANGULAR_SPEED: 0.8 # Max turning speed limit (rad/s)
