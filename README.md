@@ -34,7 +34,15 @@ ROS, Gazebo, TurtleBot3, package.xml
 
 The project is structured into modular nodes for scalability and clear separation of concerns (Perception vs. Control).
 
-[Placeholder: Diagram illustrating the data flow from /camera/image_raw -> ai_perception_node -> /object_detection/error -> p_control_node -> /cmd_vel]
+Data Flow Diagram
+
+graph LR
+    A[Gazebo /camera/image_raw] --> B(ai_perception_node: YOLO);
+    B --> C[/object_detection/error];
+    C --> D(p_control_node: P-Controller);
+    D --> E[/cmd_vel];
+    E --> F[TurtleBot3];
+
 
 Data Flow Overview
 
@@ -60,6 +68,7 @@ vision_follower/
 │   └── p_gains.yaml           # Tunable P-Controller Gains
 ├── package.xml                # ROS Manifest & Dependencies
 └── CMakeLists.txt             # ROS Build Script
+
 
 
 ⚠️ Status: Active Development
