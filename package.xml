@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>vision_follower</name>
+  <version>1.0.0</version>
+  <description>Simple Object Detection and Following Robot (in Simulation)</description>
+  <maintainer email="your_email@example.com">Khushi Jaiswal</maintainer>
+  <license>MIT</license>
+
+  <!-- Build Tool Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Core ROS Dependencies (For messages, nodes, and Python execution) -->
+  <depend>rospy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+
+  <!-- Non-ROS (AI/CV) Dependencies - Mentioned for clarity -->
+  <!-- Note: These are installed separately via pip (e.g., torch, opencv-python) -->
+
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>
