@@ -1,0 +1,20 @@
+<launch>
+  <group ns="turtlebot3_waffle_pi">
+    
+    <!-- 1. Launch the Simulated World (e.g., TurtleBot3 in a simple Gazebo environment) -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+    
+    <!-- 2. Launch the AI Perception Node -->
+    <node pkg="vision_follower" type="ai_perception_node.py" name="ai_perception_node" output="screen"/>
+    
+    <!-- 3. Launch the P-Controller Node -->
+    <node pkg="vision_follower" type="p_control_node.py" name="p_control_node" output="screen">
+      <!-- Load configurable parameters (P-Gains) -->
+      <rosparam command="load" file="$(find vision_follower)/config/p_gains.yaml"/>
+    </node>
+
+    <!-- 4. Rviz Visualization (Optional: to visualize the camera feed/bounding boxes) -->
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find vision_follower)/rviz/follower.rviz"/> -->
+  
+  </group>
+</launch>
