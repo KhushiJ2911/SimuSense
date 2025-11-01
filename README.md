@@ -1,6 +1,6 @@
 Simple Object Detection and Following Robot (in Simulation)
 
-$$Placeholder: GIF/Video demonstrating TurtleBot3 autonomously tracking the target object in Gazebo$$
+[Placeholder: GIF/Video demonstrating TurtleBot3 autonomously tracking the target object in Gazebo]
 
 This project demonstrates Visual Servoing—the use of visual information (from a camera) to control a robot's movement—within a complete ROS/Gazebo simulation environment. It is a foundational exercise in applying Deep Learning (AI/ML) to classic mobile robotics control problems.
 
@@ -34,7 +34,7 @@ ROS, Gazebo, TurtleBot3, package.xml
 
 The project is structured into modular nodes for scalability and clear separation of concerns (Perception vs. Control).
 
-$$Placeholder: Diagram illustrating the data flow from `/camera/image_raw` -\> `ai_perception_node` -\> `/object_detection/error` -\> `p_control_node` -\> `/cmd_vel`$$
+[Placeholder: Diagram illustrating the data flow from /camera/image_raw -> ai_perception_node -> /object_detection/error -> p_control_node -> /cmd_vel]
 
 Data Flow Overview
 
@@ -60,8 +60,6 @@ vision_follower/
 │   └── p_gains.yaml           # Tunable P-Controller Gains
 ├── package.xml                # ROS Manifest & Dependencies
 └── CMakeLists.txt             # ROS Build Script
-
-
 
 
 ⚠️ Status: Active Development
